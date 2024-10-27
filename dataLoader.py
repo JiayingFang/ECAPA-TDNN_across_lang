@@ -89,3 +89,35 @@ class train_loader(object):
 			noises.append(numpy.sqrt(10 ** ((clean_db - noise_db - noisesnr) / 10)) * noiseaudio)
 		noise = numpy.sum(numpy.concatenate(noises,axis=0),axis=0,keepdims=True)
 		return noise + audio
+
+
+# The data loader for target dataset
+#######################
+## Edited by Jiaying ##
+#######################
+class target_loader(object):
+    def __init__(self, target_train_list, target_train_path, num_frames, **kwargs):
+        self.train_path = target_train_path
+        self.num_frames = num_frames
+        # Load data & labels
+        self.data_list = []
+        lines = open(target_train_list).read().splitlines()
+        for line in lines:
+            file_name = os.path.join(target_train_path, line.split()[0])
+            for filename in os.listdir(file_name):
+                fn = os.path.join(file_name, filename)
+                self.data_list.append(fn)
+    
+    def __getitem__(self, index):
+        audio, sr = soundfile.read(self.data_list[index])
+        length = self.num_frames * 160 + 240
+        if audio.shape[0] <= length:
+            shortage = length - audio.shape[0]
+            audio = numpy.pad(audio, (0, shortage), 'wrap')
+        start_frame = numpy.int64(random.random()*(audio.shape[0]-length))
+        audio = audio[start_frame:start_frame + length]
+        audio = numpy.stack([audio], axis=0)
+        return torch.FloatTensor(audio[0])
+
+    def __len__(self):
+        return len(self.data_list)

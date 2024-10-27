@@ -1,3 +1,22 @@
+This repository contains the code for my Final-year Project at HKPolyU: Deep Speaker Embedding Across Languages. It is inspired by [Multi-level deep neural network adaptation for speaker verification](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9054134).
+
+This repository is modifed upon an unofficial reimplementation of ECAPA-TDNN. 
+I edited:
+1) dataLoader.py
+2) dataprep.py
+3) ECAPAModel.py
+4) train.py
+5) trainECAPAModel.py
+
+I created:
+1) flac_to_wav.py
+2) demo.py
+
+I also created a demo.py file in the demo folder for demonstration program.
+
+The models are stored in `exps/exp2/model`.
+
+Below is the README.md of the original ECAPA-TDNN repo.
 ## Introduction
 
 This repository contains my unofficial reimplementation of the standard [ECAPA-TDNN](https://arxiv.org/pdf/2005.07143.pdf), which is the speaker recognition in VoxCeleb2 dataset.
