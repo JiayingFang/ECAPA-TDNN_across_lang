@@ -1,4 +1,4 @@
-This repository contains the code for my Final-year Project at HKPolyU: Deep Speaker Embedding Across Languages. It is inspired by [Multi-level deep neural network adaptation for speaker verification](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9054134).
+This repository contains the code for my Final-year Project at HKPolyU: [Deep Speaker Embedding Across Languages](https://drive.google.com/file/d/1u0oVlbbCxIFAbcdxVdU_fLN6S6T79gW6/view?usp=sharing). It is inspired by [Multi-level deep neural network adaptation for speaker verification](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9054134).
 
 This repository is modifed upon an unofficial reimplementation of ECAPA-TDNN. 
 I edited:
