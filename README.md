@@ -3,15 +3,14 @@ This repository contains the code for my Final-year Project at HKPolyU: [Deep Sp
 
 This repository is modifed upon an unofficial reimplementation of ECAPA-TDNN. 
 I edited:
-1) dataLoader.py
-2) dataprep.py
-3) ECAPAModel.py
-4) train.py
-5) trainECAPAModel.py
+1) `dataLoader.py`
+2) `dataprep.py`
+3) `ECAPAModel.py`
+4) `trainECAPAModel.py`
 
 I created:
-1) flac_to_wav.py
-2) demo.py
+1) `flac_to_wav.py`
+2) `demo/demo.py`
 
 I also created a demo.py file in the demo folder for demonstration program.
 
