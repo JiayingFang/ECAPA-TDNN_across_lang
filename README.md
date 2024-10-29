@@ -16,9 +16,9 @@ I created:
 I also created a demo.py file in the demo folder for demonstration program.
 
 If you want to reproduce the result in my report, please download the VoxCeleb2 and CN-Celeb dataset and train it according to the instruction in the original ECAPA-TDNN repo. Example:
-'''
+```
 python trainECAPAModel.py --train_list <PATH_TO_SOURCE_TRAIN_LIST> --train_path <PATH_TO_SOURCE_TRAIN_DATA> --target_train_list <PATH_TO_TARGET_TRAIN_LIST> --target_train_path <PATH_TO_TARGET_TRAIN_DATA> --initial_model exps/pretrain.model
-'''
+```
 
 My pretrained models are stored in `exps/exp2/model`.
 
